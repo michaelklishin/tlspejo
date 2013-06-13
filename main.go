@@ -13,7 +13,7 @@ import (
 var keyFile  = flag.String("key-file", "./tls/server/key.pem", "Server private key to use")
 var certFile = flag.String("cert-file", "./tls/server/cert.pem", "Server certificate to use")
 
-var cipherSuites = []uint16{tls.TLS_RSA_WITH_RC4_128_SHA, tls.TLS_RSA_WITH_AES_128_CBC_SHA, tls.TLS_RSA_WITH_AES_256_CBC_SHA}
+var cipherSuites = []uint16{tls.TLS_RSA_WITH_RC4_128_SHA, tls.TLS_RSA_WITH_AES_128_CBC_SHA, tls.TLS_RSA_WITH_AES_256_CBC_SHA, tls.TLS_ECDHE_RSA_WITH_RC4_128_SHA, tls.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA}
 
 func main() {
         flag.Parse()
