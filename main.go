@@ -68,9 +68,9 @@ func serve(conn net.Conn) {
 
         state := tlscon.ConnectionState()
 
-        log.Println("Client public key is:")
+        log.Println("Client certificates:")
         for _, v := range state.PeerCertificates {
-            log.Print(v.PublicKey)
+                log.Println(v.Issuer)
         }
 
         log.Printf("Negotiated protocol: %s, mutual?: %t\n", state.NegotiatedProtocol, state.NegotiatedProtocolIsMutual)
