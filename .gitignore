@@ -2,5 +2,6 @@ tls/client
 tls/server
 tls/testca
 tls/connect*
+tls/curlca*
 tlspejo
 tlspejo.git
